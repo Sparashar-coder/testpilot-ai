@@ -1,0 +1,329 @@
+[
+  {
+    "testCaseId": "TC001",
+    "title": "Valid Login",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com",
+        "expectedResult": "should be able to enter in Email Text field"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should be able to Login"
+      }
+    ],
+    "expectedResult": "User should be logged in successfully",
+    "testType": "positive",
+    "priority": "high"
+  },
+  {
+    "testCaseId": "TC002",
+    "title": "Invalid Email",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "invalidemail",
+        "expectedResult": "should display error message for invalid email"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should display error message for invalid email"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC003",
+    "title": "Invalid Password",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com",
+        "expectedResult": "should be able to enter in Email Text field"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "invalidpassword",
+        "expectedResult": "should display error message for invalid password"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should display error message for invalid password"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC004",
+    "title": "Empty Email",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "",
+        "expectedResult": "should display error message for empty email"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should display error message for empty email"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC005",
+    "title": "Empty Password",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com",
+        "expectedResult": "should be able to enter in Email Text field"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "",
+        "expectedResult": "should display error message for empty password"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should display error message for empty password"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC006",
+    "title": "SQL Injection",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com' OR '1'='1",
+        "expectedResult": "should prevent SQL injection attack"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should prevent SQL injection attack"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "high"
+  },
+  {
+    "testCaseId": "TC007",
+    "title": "Cross-Site Scripting (XSS)",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "<script>alert('XSS')</script>",
+        "expectedResult": "should prevent XSS attack"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should prevent XSS attack"
+      }
+    ],
+    "expectedResult": "User should not be logged in and error message should be displayed",
+    "testType": "negative",
+    "priority": "high"
+  },
+  {
+    "testCaseId": "TC008",
+    "title": "Forgot Password",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "click on Forgot Password",
+        "target": "forgot password link",
+        "value": "",
+        "expectedResult": "should navigate to forgot password page"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com",
+        "expectedResult": "should be able to enter in Email Text field"
+      },
+      {
+        "action": "click on Recover",
+        "target": "recover button",
+        "value": "",
+        "expectedResult": "should send password recovery email"
+      }
+    ],
+    "expectedResult": "User should receive password recovery email",
+    "testType": "positive",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC009",
+    "title": "New User Registration",
+    "pageUrl": "https://www.automationexercise.com/login",
+    "preconditions": "User must be on the login page",
+    "steps": [
+      {
+        "action": "enter the URL",
+        "target": "login page",
+        "value": "https://www.automationexercise.com/login",
+        "expectedResult": "login page is visible"
+      },
+      {
+        "action": "click on New User Registration",
+        "target": "new user registration link",
+        "value": "",
+        "expectedResult": "should navigate to registration page"
+      },
+      {
+        "action": "enter the name",
+        "target": "name Text field",
+        "value": "validname",
+        "expectedResult": "should be able to enter in name Text field"
+      },
+      {
+        "action": "enter the email",
+        "target": "Email Text field",
+        "value": "validemail@gmail.com",
+        "expectedResult": "should be able to enter in Email Text field"
+      },
+      {
+        "action": "enter the password",
+        "target": "password Text field",
+        "value": "validpassword",
+        "expectedResult": "should be able to enter in password Text field"
+      },
+      {
+        "action": "click on Submit",
+        "target": "submit button",
+        "value": "",
+        "expectedResult": "should create new user account"
+      }
+    ],
+    "expectedResult": "User should be registered successfully",
+    "testType": "positive",
+    "priority": "high"
+  }
+]

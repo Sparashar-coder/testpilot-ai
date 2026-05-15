@@ -1,0 +1,266 @@
+[
+  {
+    "testCaseId": "TC001",
+    "title": "Add a new pet to the store with valid data",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "expectedStatusCode": 200,
+    "expectedResponse": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "testType": "positive",
+    "priority": "high"
+  },
+  {
+    "testCaseId": "TC002",
+    "title": "Add a new pet to the store with invalid JSON data",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {
+      "id": "string",
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "expectedStatusCode": 400,
+    "expectedResponse": {
+      "code": 400,
+      "message": "invalid input"
+    },
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC003",
+    "title": "Add a new pet to the store with missing required fields",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {
+      "id": 1,
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ]
+    },
+    "expectedStatusCode": 400,
+    "expectedResponse": {
+      "code": 400,
+      "message": "category is required"
+    },
+    "testType": "negative",
+    "priority": "medium"
+  },
+  {
+    "testCaseId": "TC004",
+    "title": "Add a new pet to the store with empty request body",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {},
+    "expectedStatusCode": 400,
+    "expectedResponse": {
+      "code": 400,
+      "message": "request body is empty"
+    },
+    "testType": "negative",
+    "priority": "low"
+  },
+  {
+    "testCaseId": "TC005",
+    "title": "Add a new pet to the store with very large request body",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1",
+        "url2",
+        "url3",
+        "url4",
+        "url5",
+        "url6",
+        "url7",
+        "url8",
+        "url9",
+        "url10",
+        "url11",
+        "url12",
+        "url13",
+        "url14",
+        "url15",
+        "url16",
+        "url17",
+        "url18",
+        "url19",
+        "url20"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "expectedStatusCode": 413,
+    "expectedResponse": {
+      "code": 413,
+      "message": "request body is too large"
+    },
+    "testType": "edge",
+    "priority": "low"
+  },
+  {
+    "testCaseId": "TC006",
+    "title": "Add a new pet to the store without authentication",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "requestBody": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "expectedStatusCode": 200,
+    "expectedResponse": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "testType": "auth",
+    "priority": "high"
+  },
+  {
+    "testCaseId": "TC007",
+    "title": "Add a new pet to the store with invalid authentication",
+    "endpoint": "https://petstore.swagger.io/v2/pet",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "api_key": "invalid_api_key"
+    },
+    "requestBody": {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "dog"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "url1"
+      ],
+      "tags": [
+        {
+          "id": 1,
+          "name": "tag1"
+        }
+      ],
+      "status": "available"
+    },
+    "expectedStatusCode": 401,
+    "expectedResponse": {
+      "code": 401,
+      "message": "invalid api key"
+    },
+    "testType": "auth",
+    "priority": "medium"
+  }
+]
