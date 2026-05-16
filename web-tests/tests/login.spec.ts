@@ -11,6 +11,7 @@ const users = JSON.parse(
 const validUser = users.find((u:any )=> u.userType ==='validUser')
 const InvalidUser = users.find((u:any )=> u.userType ==='invalidUser')
 
+
 test('Test Valid User',async({ page })=>{
     const loginpage = new LoginPage(page);
     const homepage = new HomePage(page);
@@ -30,4 +31,32 @@ test('Invalid User', async({ page })=>{
 await loginpage.login(InvalidUser.email,InvalidUser.password)
 const message = await loginpage.getErrorMessage();
 expect(message).toEqual('Your email or password is incorrect!')
+})
+
+test('Empty Fields Test', async ({ page }) => {
+  const EmptyUser = users.find((u:any )=> u.userType ==='emptyData')
+  const loginpage = new LoginPage(page);
+  await loginpage.navigateTo();
+  await loginpage.login(EmptyUser.email,EmptyUser.password)
+  expect(page.url()).toContain('/login')
+})
+
+
+
+test('SQL Injection Test', async ({ page }) => {
+  const maliciousUser = users.find((u:any )=> u.userType ==='maliciousData')
+  const loginpage = new LoginPage(page);
+  await loginpage.navigateTo();
+  await loginpage.login(maliciousUser.email,maliciousUser.password)
+
+  expect(page.url()).toContain('/login')
+})
+
+test('XSS Attack Test', async ({ page }) => {
+  const maliciousUser = users.find((u:any )=> u.userType ==='maliciousData')
+  const loginpage = new LoginPage(page);
+  await loginpage.navigateTo();
+  await loginpage.login(maliciousUser.email,maliciousUser.password)
+
+  expect(page.url()).toContain('/login')
 })

@@ -1,0 +1,30 @@
+[
+  {
+    "userType": "validUser",
+    "name": "Test User",
+    "email": "testpilot123@gmail.com",
+    "password": "Test@1234",
+    "description": "Valid credentials"
+  },
+  {
+    "userType": "invalidUser",
+    "name": "Wrong User",
+    "email": "wrong@email.com",
+    "password": "wrongpassword",
+    "description": "Invalid credentials"
+  },
+  {
+    "userType": "emptyData",
+    "name": "Empty User",
+    "email": "",
+    "password": "",
+    "description": "Empty fields test"
+  },
+  {
+    "userType": "maliciousData",
+    "name": "Hacker User",
+    "email": "' OR '1'='1",
+    "password": "<script>alert('XSS')</script>",
+    "description": "Security testing"
+  }
+]

@@ -14,9 +14,10 @@ export class HomePage{
     }
 
 
-    async isLoggedIn(username : string):Promise<boolean>{
-        return await this.page.getByText(`Logged in as ${username}`).isVisible()
-    }
+    async isLoggedIn(username: string): Promise<boolean> {
+      await this.page.waitForLoadState('networkidle')
+      return await this.page.getByText(`Logged in as ${username}`).isVisible()
+  }
       async logout(){
         await this.logoutButton.click()
       }
