@@ -1,5 +1,4 @@
-import{Page , Locator} from '@playwright/test'
-
+import { Page, Locator } from '@playwright/test';
 export class LoginPage{
 
     private readonly page : Page
@@ -9,16 +8,17 @@ export class LoginPage{
    
     constructor(page :Page){
         this.page = page
-        this.emailField = this.page.getByPlaceholder('Email Address')
+        this.emailField =  page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address')
         this.passwordField = this.page.getByPlaceholder('Password')
         this.loginButton = this.page.getByRole('button', { name: 'Login' })
     }
 
-    async navigateTo(){
-        await this.page.goto("https://www.automationexercise.com/login")
+    async navigateTo() {
+        await this.page.goto('/login');
     }
 
     async login(email:string , password:string){
+
         await this.emailField.fill(email)
         await this.passwordField.fill(password)
         await this.loginButton.click()
