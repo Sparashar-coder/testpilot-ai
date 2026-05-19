@@ -1,0 +1,1 @@
+{"uuid":"e34ca3ad-eb0d-4e1f-aa1f-2ec586f2d50b","name":"com.testpilot.tests.UserTests","children":["ff9a6464-537e-4b82-a461-087b56653be8"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1779126140619,"stop":1779126141029}],"afters":[],"start":1779126140590,"stop":1779126143417}
