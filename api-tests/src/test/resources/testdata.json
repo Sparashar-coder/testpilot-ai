@@ -1,0 +1,23 @@
+[
+    {
+      "testType": "validUser",
+      "name": "Test User",
+      "username": "testuser",
+      "email": "test@test.com",
+      "expectedStatus": 201
+    },
+    {
+      "testType": "emptyName",
+      "name": "",
+      "username": "testuser",
+      "email": "test@test.com",
+      "expectedStatus": 201
+    },
+    {
+      "testType": "missingEmail",
+      "name": "Test User",
+      "username": "testuser",
+      "email": "",
+      "expectedStatus": 201
+    }
+  ]

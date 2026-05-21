@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.testpilot.tests.UserTests" class="method navigator-link" hash-for-method="createUser">createUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.testpilot.tests.DataDrivenTest" class="method navigator-link" hash-for-method="createUserDDT(Test User, testuser, , 201)">createUserDDT(Test User, testuser, , 201)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.testpilot.tests.DataDrivenTest" class="method navigator-link" hash-for-method="createUserDDT(, testuser, test@test.com, 201)">createUserDDT(, testuser, test@test.com, 201)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.testpilot.tests.DataDrivenTest" class="method navigator-link" hash-for-method="createUserDDT(Test User, testuser, test@test.com, 201)">createUserDDT(Test User, testuser, test@test.com, 201)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +153,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testpilot.tests.DataDrivenTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserDDT(Test User, testuser, , 201)">
+                  </a> <!-- createUserDDT(Test User, testuser, , 201) -->
+                  <span class="method-name">createUserDDT</span>
+                  <span class="parameters">(Test User,testuser,,201)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserDDT(, testuser, test@test.com, 201)">
+                  </a> <!-- createUserDDT(, testuser, test@test.com, 201) -->
+                  <span class="method-name">createUserDDT</span>
+                  <span class="parameters">(,testuser,test@test.com,201)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createUserDDT(Test User, testuser, test@test.com, 201)">
+                  </a> <!-- createUserDDT(Test User, testuser, test@test.com, 201) -->
+                  <span class="method-name">createUserDDT</span>
+                  <span class="parameters">(Test User,testuser,test@test.com,201)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -193,6 +240,7 @@
   &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.testpilot.base.BaseTest&quot;/&gt;
+      &lt;class name=&quot;com.testpilot.tests.DataDrivenTest&quot;/&gt;
       &lt;class name=&quot;com.testpilot.tests.UserTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
@@ -207,7 +255,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,32 +281,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createUser')
-data.setCell(0, 2, 'com.testpilot.tests.UserTests')
-data.setCell(0, 3, 2165);
+data.setCell(0, 1, 'createUserDDT')
+data.setCell(0, 2, 'com.testpilot.tests.DataDrivenTest')
+data.setCell(0, 3, 2156);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'updateUser')
+data.setCell(1, 1, 'createUser')
 data.setCell(1, 2, 'com.testpilot.tests.UserTests')
-data.setCell(1, 3, 1001);
+data.setCell(1, 3, 1043);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'deleteUser')
+data.setCell(2, 1, 'updateUser')
 data.setCell(2, 2, 'com.testpilot.tests.UserTests')
-data.setCell(2, 3, 999);
+data.setCell(2, 3, 946);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getUsers')
+data.setCell(3, 1, 'deleteUser')
 data.setCell(3, 2, 'com.testpilot.tests.UserTests')
-data.setCell(3, 3, 662);
+data.setCell(3, 3, 543);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getSingleUser')
-data.setCell(4, 2, 'com.testpilot.tests.UserTests')
-data.setCell(4, 3, 288);
+data.setCell(4, 1, 'createUserDDT')
+data.setCell(4, 2, 'com.testpilot.tests.DataDrivenTest')
+data.setCell(4, 3, 520);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'createUserDDT')
+data.setCell(5, 2, 'com.testpilot.tests.DataDrivenTest')
+data.setCell(5, 3, 482);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'getUsers')
+data.setCell(6, 2, 'com.testpilot.tests.UserTests')
+data.setCell(6, 3, 294);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'getSingleUser')
+data.setCell(7, 2, 'com.testpilot.tests.UserTests')
+data.setCell(7, 3, 272);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -284,30 +344,49 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.testpilot.tests.UserTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.testpilot.tests.DataDrivenTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">createUserDDT(Test User, testuser, test@test.com, 201)</span>
+                <span class="method-start">462 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUserDDT(, testuser, test@test.com, 201)</span>
+                <span class="method-start">2661 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createUserDDT(Test User, testuser, , 201)</span>
+                <span class="method-start">3183 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testpilot.tests.UserTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">3668 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
                 <span class="method-name">createUser</span>
-                <span class="method-start">380 ms</span>
+                <span class="method-start">3669 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteUser</span>
-                <span class="method-start">2599 ms</span>
+                <span class="method-start">4714 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getSingleUser</span>
-                <span class="method-start">3601 ms</span>
+                <span class="method-start">5258 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getUsers</span>
-                <span class="method-start">3894 ms</span>
+                <span class="method-start">5532 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updateUser</span>
-                <span class="method-start">4557 ms</span>
+                <span class="method-start">5827 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

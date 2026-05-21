@@ -3,12 +3,12 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.testpilot.tests.UserTests">
+      <class name="com.testpilot.tests.DataDrivenTest">
         <methods>
-          <include name="getUsers"/>
+          <include name="createUserDDT" invocation-numbers="0 1 2"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.testpilot.tests.UserTests -->
+      </class> <!-- com.testpilot.tests.DataDrivenTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
